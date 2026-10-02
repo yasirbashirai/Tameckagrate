@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+/*
+ * Brand tokens, taken from the From Survival to Soft butterfly logo
+ * (same palette as the approved proposal).
+ */
+@theme {
+  --color-plum: #9b5b8e;
+  --color-plum-deep: #7e4a76;
+  --color-plum-ink: #5b3455;
+  --color-blush: #f5e9f0;
+  --color-slate: #5b6878;
+  --color-slate-deep: #333f4e;
+  --color-cream: #fbf8f4;
+  --color-sand: #f3ece3;
+  --color-gold: #b58f45;
+  --color-ink: #1a2029;
+  --color-line: #dfd5cb;
+
+  --font-display: var(--font-archivo), Helvetica, Arial, sans-serif;
+  --font-sans: var(--font-source-sans), -apple-system, Helvetica, sans-serif;
+  --font-script: var(--font-script-face), cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+
+/* Gentle entrance motion. Nothing that jolts (see proposal, "The Look"). */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.rise {
+  animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.rise-2 {
+  animation-delay: 0.15s;
+}
+.rise-3 {
+  animation-delay: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+  }
+}
