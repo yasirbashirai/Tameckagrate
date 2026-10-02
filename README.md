@@ -1,13 +1,17 @@
-# Tamecka Grate-Frazier: Website
+# Tamecka Grate: Website
 
-New website for **Tamecka Grate-Frazier** (author of *Life After*, speaker, founder of
+New website for **Tamecka Grate** (author of *Life After*, speaker, founder of
 **From Survival to Soft**). Replaces the 2020 Wix site at tameckafrazier.com.
 
 Package: **The Full Experience ($650)**. Scope and design rules are in the proposal:
 `../tamecka-frazier-proposal/proposal.html`.
 
+## Name rule
+She is **Tamecka Grate** everywhere. "Frazier" appears only on the physical book cover image.
+Target domain: **tameckagrate.com** (available Oct 2026), 301 the old tameckafrazier.com to it.
+
 ## Stack
-- Next.js (App Router) + Tailwind CSS v4
+- Next.js (App Router) + Tailwind CSS v4 + Motion (animation) + Lenis (smooth scroll)
 - Hosting: Vercel
 - Fonts: Archivo (headlines), Source Sans 3 (body), Allura (script accents)
 - Palette: plum / slate / cream / gold, from the butterfly logo (tokens in `src/app/globals.css`)
@@ -21,24 +25,26 @@ public/images/      web-optimised photos + logos
 content-source/     original files from client + old Wix site (not deployed)
 ```
 
-## The 8 sections
-| Route | Status |
+## Pages
+| Route | What |
 |---|---|
-| `/` Home | ✅ built |
-| `/about` | ⏳ |
-| `/from-survival-to-soft` | ⏳ |
-| `/life-after` | ⏳ |
-| `/speaking` | ⏳ |
-| `/soft-collection` | ⏳ |
-| `/impact` | ⏳ |
-| `/connect` | ⏳ |
+| `/` | v2 homepage: intro, magazine hero, Survival→Soft morph, story chapters, journey, 3D book, quote, nonprofit + giving, speaking + booking form, shop rail, eBook |
+| `/shop` | filterable shop + cart drawer |
+| `/donate` | giving widget, allocation, volunteer + partner forms |
+| `/thank-you` | Stripe success page |
+
+## Payments
+`src/app/api/checkout/route.ts` creates Stripe Checkout sessions (shop orders + one-time/monthly donations).
+Set `STRIPE_SECRET_KEY` in Vercel to go live. Without it the site runs in preview mode (nothing charged).
 
 ## Still needed from Tamecka
 - Nonprofit mission, programs, donate link (copy marked DRAFT in code)
 - Speaking topics confirmed, video link, testimonials
 - Soft Collection photos/description
 - Email provider for the eBook signup (`src/app/api/subscribe/route.ts`)
-- Inbox address for contact form
+- Inbox address for contact form (footer shows placeholder hello@tameckagrate.com)
+- Stripe account (or nonprofit 501(c)(3) status if using Zeffy/Givebutter instead)
+- Real merch photos + prices; renamed social handles
 
 ## Run locally
 ```bash

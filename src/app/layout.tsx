@@ -2,14 +2,19 @@ import type { Metadata } from "next";
 import { Archivo, Source_Sans_3, Allura } from "next/font/google";
 import Header from "@components/header";
 import Footer from "@components/footer";
+import { CartProvider } from "@components/cart";
+import CartDrawer from "@components/cart-drawer";
+import SmoothScroll from "@components/smooth-scroll";
+import Cursor from "@components/cursor";
+import Preloader from "@components/preloader";
 import { site, book } from "@/lib/site";
 import "./globals.css";
 
-const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"] });
+// Archivo loaded as a variable font WITH the width axis: powers the Survival → Soft morph
+const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"] });
 const sourceSans = Source_Sans_3({ variable: "--font-source-sans", subsets: ["latin"] });
 const script = Allura({ variable: "--font-script-face", subsets: ["latin"], weight: "400" });
 
-// Real titles + descriptions (the old Wix site said "Home | Mysite" on every page)
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -17,7 +22,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Tamecka Grate-Frazier is a Dallas author, speaker and founder of From Survival to Soft. Read her memoir Life After, book her to speak, and support women rebuilding their lives.",
+    "Tamecka Grate is a Dallas author, speaker and founder of From Survival to Soft. Read her memoir Life After, book her to speak, shop, and support women rebuilding their lives.",
   openGraph: {
     type: "website",
     siteName: site.name,
@@ -25,7 +30,7 @@ export const metadata: Metadata = {
   },
 };
 
-// Structured data so Google + AI search know who she is (old site had none)
+// Structured data so Google + AI search know who she is
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
@@ -47,7 +52,7 @@ const jsonLd = {
       author: { "@id": `${site.url}/#tamecka` },
     },
     {
-      "@type": "Organization",
+      "@type": "NGO",
       name: site.nonprofit,
       founder: { "@id": `${site.url}/#tamecka` },
     },
@@ -56,18 +61,18 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="en"
-      className={`${archivo.variable} ${sourceSans.variable} ${script.variable} antialiased`}
-    >
-      <body className="flex min-h-screen flex-col">
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+    <html lang="en" className={`${archivo.variable} ${sourceSans.variable} ${script.variable}`}>
+      <body className="grain flex min-h-screen flex-col">
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+        <CartProvider>
+          <Preloader />
+          <SmoothScroll />
+          <Cursor />
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+          <CartDrawer />
+        </CartProvider>
       </body>
     </html>
   );
