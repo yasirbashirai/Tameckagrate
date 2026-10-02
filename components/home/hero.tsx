@@ -85,10 +85,10 @@ export default function Hero() {
         className="absolute bottom-0 left-1/2 h-[62%] w-auto -translate-x-1/2 origin-bottom sm:h-[80%]"
       >
         <Image
-          src="/images/cutout-hero.webp"
-          alt="Tamecka Grate"
-          width={805}
-          height={1155}
+          src="/images/cutout-hero-purple.webp"
+          alt="Tamecka Grate in a purple ruffled blouse"
+          width={971}
+          height={1400}
           priority
           className="h-full w-auto max-w-none object-contain drop-shadow-[0_30px_60px_rgba(91,52,85,0.35)]"
         />
