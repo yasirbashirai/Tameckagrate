@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 /** Compact volunteer / partner interest form. Posts to /api/contact. */
-export default function InterestForm({ type, dark = false }: { type: "volunteer" | "partner"; dark?: boolean }) {
+export default function InterestForm({ type, dark = false }: { type: "volunteer" | "partner" | "bookclub"; dark?: boolean }) {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -27,9 +27,9 @@ export default function InterestForm({ type, dark = false }: { type: "volunteer"
     <form onSubmit={onSubmit} className="mt-6 grid gap-3">
       <input name="name" required placeholder="Your name" className={input} />
       <input name="email" type="email" required placeholder="Email" className={input} />
-      <textarea name="message" rows={3} placeholder={type === "partner" ? "Your organization and idea" : "How would you like to help?"} className={input} />
+      <textarea name="message" rows={3} placeholder={{ partner: "Your organization and idea", volunteer: "How would you like to help?", bookclub: "Your group, how many copies, and your timeline" }[type]} className={input} />
       <button disabled={status === "sending"} className={`rounded-full py-3.5 font-semibold transition-transform hover:-translate-y-0.5 ${dark ? "bg-gold text-white" : "bg-plum text-white"}`}>
-        {status === "sending" ? "Sending…" : type === "partner" ? "Start a partnership" : "Sign me up"}
+        {status === "sending" ? "Sending…" : { partner: "Start a partnership", volunteer: "Sign me up", bookclub: "Request group order" }[type]}
       </button>
       {status === "error" && <p className="text-sm">Something went wrong. Please try again.</p>}
     </form>

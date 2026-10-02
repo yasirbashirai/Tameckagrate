@@ -29,9 +29,19 @@ content-source/     original files from client + old Wix site (not deployed)
 | Route | What |
 |---|---|
 | `/` | v2 homepage: intro, magazine hero, Survival→Soft morph, story chapters, journey, 3D book, quote, nonprofit + giving, speaking + booking form, shop rail, eBook |
+| `/about` | her full story, fact sheet, values, press, FAQ |
+| `/life-after` | book page: tunnel-light hero, back-cover pages, buy (3D book), book clubs, FAQ |
+| `/speaking` | stage hero, signature talks, formats, booking process + form, planner FAQ |
+| `/from-survival-to-soft` | nonprofit: founder letter, survival↔soft slider, programs, giving, FAQ |
 | `/shop` | filterable shop + cart drawer |
 | `/donate` | giving widget, allocation, volunteer + partner forms |
 | `/thank-you` | Stripe success page |
+
+## SEO
+- Per-page title, description, canonical, Open Graph + Twitter cards (`src/lib/seo.ts`)
+- Structured data: Person, Book (with offers), NGO + DonateAction, Service, ProfilePage, BreadcrumbList, FAQPage
+- `/sitemap.xml` + `/robots.txt` generated from `src/app/sitemap.ts` + `robots.ts`
+- Set the final domain in `site.url` (`src/lib/site.ts`) before launch
 
 ## Payments
 `src/app/api/checkout/route.ts` creates Stripe Checkout sessions (shop orders + one-time/monthly donations).

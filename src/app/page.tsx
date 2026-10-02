@@ -10,6 +10,8 @@ import Speaking from "@components/home/speaking";
 import ShopRail from "@components/home/shop-rail";
 import Ebook from "@components/home/ebook";
 
+export const metadata = { alternates: { canonical: "/" } };
+
 /** Homepage: one continuous journey, Survived → Shared. */
 export default function Home() {
   return (

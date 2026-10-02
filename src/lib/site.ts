@@ -32,10 +32,10 @@ export const site = {
 
 /** Main navigation. */
 export const nav = [
-  { label: "Her Story", href: "/#story" },
-  { label: "Life After", href: "/#book" },
-  { label: "Speaking", href: "/#speaking" },
-  { label: "The Nonprofit", href: "/#nonprofit" },
+  { label: "Her Story", href: "/about" },
+  { label: "Life After", href: "/life-after" },
+  { label: "Speaking", href: "/speaking" },
+  { label: "The Nonprofit", href: "/from-survival-to-soft" },
   { label: "Shop", href: "/shop" },
 ] as const;
 

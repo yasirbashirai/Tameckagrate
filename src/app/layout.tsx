@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: ["/images/portrait-hero.webp"],
   },
+  twitter: { card: "summary_large_image", images: ["/images/portrait-hero.webp"] },
+  robots: { index: true, follow: true },
 };
 
 // Structured data so Google + AI search know who she is

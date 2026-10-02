@@ -113,7 +113,7 @@ export default function Speaking() {
 }
 
 /** Short booking request. Posts to /api/contact. */
-function BookingForm() {
+export function BookingForm() {
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "error">("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {

@@ -4,6 +4,7 @@ import ShopGrid from "@components/shop-grid";
 export const metadata: Metadata = {
   title: "The Soft Shop",
   description: "Signed copies of Life After, the Aspire to Inspire journal and From Survival to Soft merchandise. Every purchase supports the mission.",
+  alternates: { canonical: "/shop" },
 };
 
 export default function ShopPage() {

@@ -6,6 +6,7 @@ import InterestForm from "@components/interest-form";
 export const metadata: Metadata = {
   title: "Donate to From Survival to Soft",
   description: "Give once or monthly to From Survival to Soft, the nonprofit founded by Tamecka Grate to help women move from surviving to living.",
+  alternates: { canonical: "/donate" },
 };
 
 /** DRAFT allocation. Replace with real figures once the nonprofit's budget is set. */
