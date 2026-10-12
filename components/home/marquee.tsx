@@ -21,7 +21,7 @@ function Row({ reverse = false, className = "" }: { reverse?: boolean; className
 /** Two crossing ribbons of her roles, scrolling in opposite directions. */
 export default function Marquee() {
   return (
-    <section className="relative z-10 -my-6 overflow-hidden py-14" aria-label="Author, speaker, founder, survivor">
+    <section className="relative z-10 -my-6 overflow-hidden bg-gradient-to-b from-[#0b0a0c] from-50% to-[#1f2731] to-50% py-14" aria-label="Author, speaker, founder, survivor">
       <div className="-rotate-2 bg-plum-ink py-4 text-white shadow-xl">
         <Row />
       </div>

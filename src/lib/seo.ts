@@ -9,7 +9,7 @@ export function pageMetadata({
   path,
   title,
   description,
-  image = "/images/portrait-hero.webp",
+  image = "/images/photo-front.webp",
   keywords = [],
 }: {
   path: string;

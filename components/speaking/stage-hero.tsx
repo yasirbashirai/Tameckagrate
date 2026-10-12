@@ -70,10 +70,10 @@ export default function StageHero() {
           className="relative mx-auto flex h-[62vh] items-end self-end lg:h-[84vh]"
         >
           <Image
-            src="/images/cutout-standing-grey.webp"
-            alt="Tamecka Grate on stage in a green blouse and cream suit"
-            width={387}
-            height={1321}
+            src="/images/cutout-dance.webp"
+            alt="Tamecka Grate on stage, arms raised, in a black sequined jacket"
+            width={413}
+            height={568}
             priority
             className="h-full w-auto object-contain drop-shadow-[0_0_60px_rgba(245,233,240,0.25)]"
           />

@@ -72,33 +72,33 @@ export const timeline = [
     year: "Dallas",
     title: "A Dallas daughter",
     text: "Raised in Dallas and educated in the Wilmer Hutchins school district, Tamecka went on to earn her degree in Business Administration from Northwood University.",
-    image: "/images/cutout-standing-white.webp",
+    image: "/images/cutout-smile.webp",
   },
   {
     year: "1996",
     title: "The night everything changed",
     text: "At 24, after a New Year's Eve gathering, she was attacked in her own neighborhood and left for dead. By the grace of God, she survived what doctors called a miracle.",
-    image: "/images/portrait-profile.webp",
-    // full dark photo (not a cut-out): the night chapter
+    image: "/images/photo-green.webp",
+    // full dark studio photo (not a cut-out): the night chapter
     dark: true,
   },
   {
     year: "20+ yrs",
     title: "A leader for people",
     text: "Two decades at AT&T, rising to Employee Relations Manager. She learned how organizations care for people, and where they fall short.",
-    image: "/images/cutout-standing-grey.webp",
+    image: "/images/cutout-chair.webp",
   },
   {
     year: "2020",
     title: "Life After is published",
     text: "She finally put the night, and everything after it, on paper. Her memoir became a survival guide for anyone who has lost their way back to normal.",
-    image: "/images/cutout-hero.webp",
+    image: "/images/cutout-sequin.webp",
   },
   {
     year: "Today",
     title: "From Survival to Soft",
     text: "Speaker, author, grandmother and founder. Her work now is helping women move beyond surviving, into a life that is soft, whole and fully theirs.",
-    image: "/images/cutout-standing-white.webp",
+    image: "/images/cutout-gown.webp",
   },
 ] as const;
 
@@ -119,25 +119,38 @@ export const press = [
   },
 ] as const;
 
+/** Television appearances. Supplied by Tamecka, Oct 2026. */
+export const tvFeatures = [
+  {
+    show: "The Oprah Winfrey Show",
+    detail: "Guest, 1997",
+    image: "/images/oprah-1997.webp",
+  },
+  {
+    show: "I Survived…",
+    detail: "Season 4, Episode 3",
+  },
+] as const;
+
 /** DRAFT: speaking topics built from her story. Tamecka to confirm titles. */
 export const speakingTopics = [
   {
     title: "Life After the Unthinkable",
     text: "Her signature keynote on survival, faith and choosing to live fully again.",
     audience: "Conferences · Churches · Women's events",
-    image: "/images/cutout-hero.webp",
+    image: "/images/cutout-dance.webp",
   },
   {
     title: "Seen, Not Looked At",
     text: "Two decades in Employee Relations, on supporting survivors in the workplace.",
     audience: "Corporate · HR · Wellness programs",
-    image: "/images/cutout-standing-grey.webp",
+    image: "/images/cutout-chair.webp",
   },
   {
     title: "Softness Is Strength",
     text: "How women rebuild an identity they love after trauma, and why softness is power.",
     audience: "Universities · Awareness months · Retreats",
-    image: "/images/cutout-standing-white.webp",
+    image: "/images/cutout-gown.webp",
   },
 ] as const;
 

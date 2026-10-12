@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Archivo, Source_Sans_3, Allura } from "next/font/google";
+import { Archivo, Source_Sans_3, Allura, Fraunces, Nunito, DM_Serif_Display } from "next/font/google";
 import Header from "@components/header";
 import Footer from "@components/footer";
 import { CartProvider } from "@components/cart";
@@ -15,6 +15,11 @@ const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: 
 const sourceSans = Source_Sans_3({ variable: "--font-source-sans", subsets: ["latin"] });
 const script = Allura({ variable: "--font-script-face", subsets: ["latin"], weight: "400" });
 
+// Hero name font candidates (Oct 2026: client wants "bold block, but softer"). Pick one, drop the rest.
+const fraunces = Fraunces({ variable: "--font-fraunces", subsets: ["latin"], axes: ["SOFT", "opsz"] });
+const nunito = Nunito({ variable: "--font-nunito", subsets: ["latin"], weight: ["800", "900"] });
+const dmSerif = DM_Serif_Display({ variable: "--font-dm-serif", subsets: ["latin"], weight: "400" });
+
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
@@ -26,9 +31,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: site.name,
-    images: ["/images/portrait-hero.webp"],
+    images: ["/images/photo-front.webp"],
   },
-  twitter: { card: "summary_large_image", images: ["/images/portrait-hero.webp"] },
+  twitter: { card: "summary_large_image", images: ["/images/photo-front.webp"] },
   robots: { index: true, follow: true },
 };
 
@@ -42,7 +47,7 @@ const jsonLd = {
       name: site.name,
       jobTitle: "Author, Speaker, Founder",
       url: site.url,
-      image: `${site.url}/images/portrait-hero.webp`,
+      image: `${site.url}/images/photo-front.webp`,
       homeLocation: { "@type": "Place", name: "Dallas, Texas" },
       alumniOf: "Northwood University",
       sameAs: Object.values(site.socials),
@@ -63,7 +68,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${archivo.variable} ${sourceSans.variable} ${script.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${sourceSans.variable} ${script.variable} ${fraunces.variable} ${nunito.variable} ${dmSerif.variable}`}>
       <body className="grain flex min-h-screen flex-col">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         <CartProvider>

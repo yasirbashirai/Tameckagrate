@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring } from "motion/react";
 import { nav, site } from "@/lib/site";
@@ -16,6 +17,8 @@ export default function Header() {
   const { count, setOpen: openCart } = useCart();
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 30 });
+  // Pages with dark heroes: use light text until the frosted bar kicks in
+  const onDark = ["/", "/speaking"].includes(usePathname()) && !scrolled && !open;
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -34,8 +37,8 @@ export default function Header() {
         }`}
       >
         <Link href="/" className="flex items-baseline gap-1.5" onClick={() => setOpen(false)}>
-          <span className="font-display text-xl font-extrabold tracking-tight text-plum-ink">{site.firstName}</span>
-          <span className="font-script text-3xl leading-none text-plum">{site.lastName}</span>
+          <span className={`font-display text-xl font-extrabold tracking-tight transition-colors ${onDark ? "text-cream" : "text-plum-ink"}`}>{site.firstName}</span>
+          <span className={`font-script text-3xl leading-none transition-colors ${onDark ? "text-gold-soft" : "text-plum"}`}>{site.lastName}</span>
         </Link>
 
         <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
@@ -43,7 +46,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="group relative text-[0.95rem] font-semibold text-slate-deep"
+              className={`group relative text-[0.95rem] font-semibold transition-colors ${onDark ? "text-cream/90" : "text-slate-deep"}`}
             >
               {item.label}
               <span className="absolute -bottom-1 left-0 h-px w-full origin-left scale-x-0 bg-plum transition-transform duration-300 group-hover:scale-x-100" />
@@ -55,7 +58,7 @@ export default function Header() {
           <button
             type="button"
             onClick={() => openCart(true)}
-            className="relative flex h-11 w-11 items-center justify-center rounded-full text-plum-ink transition-colors hover:bg-blush"
+            className={`relative flex h-11 w-11 items-center justify-center rounded-full transition-colors ${onDark ? "text-cream hover:bg-white/10" : "text-plum-ink hover:bg-blush"}`}
             aria-label={`Open cart, ${count} items`}
           >
             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -84,7 +87,7 @@ export default function Header() {
           </Link>
           <button
             type="button"
-            className="flex h-11 w-11 items-center justify-center rounded-full text-plum-ink lg:hidden"
+            className={`flex h-11 w-11 items-center justify-center rounded-full lg:hidden ${onDark ? "text-cream" : "text-plum-ink"}`}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen(!open)}

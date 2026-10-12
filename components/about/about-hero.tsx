@@ -65,10 +65,10 @@ export default function AboutHero() {
             <Butterfly flap />
           </div>
           <Image
-            src="/images/cutout-standing-white.webp"
-            alt="Tamecka Grate standing in a green ruffled blouse and cream trousers"
-            width={468}
-            height={1400}
+            src="/images/cutout-sequin.webp"
+            alt="Tamecka Grate standing in a rose-gold sequined dress"
+            width={151}
+            height={535}
             priority
             className="relative h-full w-auto object-contain drop-shadow-[0_30px_50px_rgba(91,52,85,0.35)]"
           />

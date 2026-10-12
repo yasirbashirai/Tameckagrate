@@ -1,4 +1,5 @@
 import Hero from "@components/home/hero";
+import AsSeenOn from "@components/home/as-seen-on";
 import Marquee from "@components/home/marquee";
 import Morph from "@components/home/morph";
 import Story from "@components/home/story";
@@ -17,6 +18,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <AsSeenOn />
       <Marquee />
       <Morph />
       <Story />

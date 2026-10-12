@@ -15,7 +15,7 @@ export const metadata = pageMetadata({
   title: "Book Tamecka Grate | Keynote Speaker on Resilience & Faith",
   description:
     "Book Tamecka Grate, Dallas keynote speaker and author of Life After, for conferences, corporate wellness, churches and universities. Keynotes and workshops.",
-  image: "/images/portrait-standing-grey.webp",
+  image: "/images/photo-dance.webp",
   keywords: ["keynote speaker Dallas", "survivor speaker", "resilience keynote", "women's conference speaker", "faith-based speaker", "workplace wellness speaker"],
 });
 

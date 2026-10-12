@@ -15,7 +15,7 @@ export const metadata = pageMetadata({
   title: "About Tamecka Grate | Survivor, Author & Speaker, Dallas",
   description:
     "Meet Tamecka Grate: Dallas survivor, author of the memoir Life After, 20+ year AT&T leader and founder of From Survival to Soft. Her story of faith and purpose.",
-  image: "/images/portrait-standing-white.webp",
+  image: "/images/photo-sequin.webp",
   keywords: ["Tamecka Grate biography", "survivor speaker Dallas", "Life After author", "trauma survivor author"],
 });
 
@@ -63,7 +63,7 @@ export default function AboutPage() {
               "@type": "Person",
               name: site.name,
               description: "Author, speaker and founder of From Survival to Soft.",
-              image: abs("/images/portrait-standing-white.webp"),
+              image: abs("/images/photo-front.webp"),
               jobTitle: ["Author", "Speaker", "Founder", "Employee Relations Manager"],
               worksFor: { "@type": "Organization", name: "AT&T" },
               alumniOf: { "@type": "CollegeOrUniversity", name: "Northwood University" },
@@ -97,10 +97,10 @@ export default function AboutPage() {
           <div className="relative hidden lg:block">
             <div className="sticky top-28 overflow-hidden rounded-[2.5rem]">
               <Image
-                src="/images/portrait-profile.webp"
-                alt="Tamecka Grate in profile, looking down"
-                width={1067}
-                height={1600}
+                src="/images/photo-seated-smile.webp"
+                alt="Tamecka Grate smiling, seated in a black sequined jacket"
+                width={427}
+                height={640}
                 className="h-[78vh] w-full object-cover"
               />
               <p className="absolute bottom-6 left-6 right-6 font-script text-4xl text-white/90">“I was chosen.”</p>
