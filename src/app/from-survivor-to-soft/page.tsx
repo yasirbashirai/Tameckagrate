@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import NpHero from "@components/nonprofit/np-hero";
 import CompareSlider from "@components/nonprofit/compare-slider";
+import SoftCollection from "@components/nonprofit/soft-collection";
 import DonateWidget from "@components/donate-widget";
 import Reveal from "@components/reveal";
 import Faq from "@components/faq";
@@ -10,15 +11,15 @@ import PageCta from "@components/page-cta";
 import { site } from "@/lib/site";
 import { abs, breadcrumb, faqSchema, pageMetadata, personRef } from "@/lib/seo";
 
-const PATH = "/from-survival-to-soft";
+const PATH = "/from-survivor-to-soft";
 
 export const metadata = pageMetadata({
   path: PATH,
-  title: "From Survival to Soft | Nonprofit by Tamecka Grate",
+  title: "From Survivor to Soft | Nonprofit by Tamecka Grate",
   description:
-    "From Survival to Soft, founded by Tamecka Grate, helps women who survived trauma heal, restore their identity and rise. Donate, volunteer or partner today.",
+    "From Survivor to Soft, founded by Tamecka Grate, helps women who survived trauma heal, restore their identity and rise. Donate, volunteer or partner today.",
   image: "/images/fsts-logo.webp",
-  keywords: ["nonprofit for women survivors", "trauma survivor support Dallas", "women's healing nonprofit", "donate to survivors", "From Survival to Soft"],
+  keywords: ["nonprofit for women survivors", "trauma survivor support Dallas", "women's healing nonprofit", "donate to survivors", "From Survivor to Soft"],
 });
 
 /** DRAFT programs. Tamecka to confirm names + details. */
@@ -31,7 +32,7 @@ const pillars = [
   {
     title: "Restore",
     line: "Getting yourself back.",
-    programs: ["Restoration Days: styling & portraits", "Confidence workshops", "The Soft Collection wardrobe closet"],
+    programs: ["Restoration Days: styling & portraits", "Confidence workshops", "The Soft Collection boutique"],
   },
   {
     title: "Rise",
@@ -49,16 +50,24 @@ const serve = [
 
 const faqs = [
   {
-    q: "What is From Survival to Soft?",
-    a: "From Survival to Soft is a nonprofit founded by author and speaker Tamecka Grate. It supports women who have survived trauma as they heal, restore their sense of self and rise to help others.",
+    q: "What is From Survivor to Soft?",
+    a: "From Survivor to Soft is a nonprofit founded by author and speaker Tamecka Grate. It supports women who have survived trauma as they heal, restore their sense of self and rise to help others.",
   },
   {
-    q: "Who founded From Survival to Soft?",
+    q: "Who founded From Survivor to Soft?",
     a: "Tamecka Grate founded the organization after surviving a violent attack in 1996 and writing about her recovery in her memoir, Life After.",
   },
   {
-    q: "How can I support From Survival to Soft?",
+    q: "How can I support From Survivor to Soft?",
     a: "You can give once or monthly on this page, volunteer your time and skills, partner as a church, company or foundation, or shop: every purchase in the Soft Shop supports the mission.",
+  },
+  {
+    q: "What is The Soft Collection?",
+    a: "The Soft Collection is a signature initiative of From Survivor to Soft (FS2S): a boutique of thoughtfully curated clothing, accessories and fashion essentials that helps women rebuilding their lives reconnect with their confidence, individuality and sense of worth.",
+  },
+  {
+    q: "Can I donate clothing or partner as a boutique?",
+    a: "Yes. We welcome new or gently loved women's clothing, shoes, handbags, jewelry and accessories, and we invite boutique owners, fashion retailers, designers and accessory brands to partner with us. Use the Boutiques With a Purpose form on this page to arrange a donation or start a partnership.",
   },
   {
     q: "How are donations used?",
@@ -94,7 +103,7 @@ export default function NonprofitPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <div className="relative mx-auto flex h-[520px] max-w-md items-end justify-center overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-blush to-rose">
-              <Image src="/images/cutout-gown.webp" alt="Tamecka Grate, founder of From Survival to Soft" width={282} height={554} className="h-[92%] w-auto object-contain" />
+              <Image src="/images/cutout-gown.webp" alt="Tamecka Grate, founder of From Survivor to Soft" width={282} height={554} className="h-[92%] w-auto object-contain" />
               <span className="absolute left-6 top-6 rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-plum-ink backdrop-blur">Founder</span>
             </div>
           </Reveal>
@@ -112,7 +121,7 @@ export default function NonprofitPage() {
                   Softness came later, on purpose. It came from faith, from the people who refused to leave me, and from
                   deciding that what happened to me would not decide who I became.
                 </p>
-                <p>From Survival to Soft exists so that no woman has to find that road alone.</p>
+                <p>From Survivor to Soft exists so that no woman has to find that road alone.</p>
               </div>
               <p className="mt-8 font-script text-5xl text-plum-ink">Tamecka</p>
             </article>
@@ -120,13 +129,13 @@ export default function NonprofitPage() {
         </div>
       </section>
 
-      {/* Survival vs Soft */}
+      {/* Survivor vs Soft */}
       <section className="bg-sand py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
           <Reveal>
             <p className="text-center font-display text-sm font-bold uppercase tracking-[0.25em] text-plum">The Journey We Walk</p>
             <h2 className="mt-4 text-center font-display text-5xl font-extrabold tracking-tight text-plum-ink sm:text-6xl">
-              Drag from survival <span className="font-script font-normal text-plum">to soft.</span>
+              Drag from survivor <span className="font-script font-normal text-plum">to soft.</span>
             </h2>
           </Reveal>
           <div className="mt-12">
@@ -179,6 +188,8 @@ export default function NonprofitPage() {
         </div>
       </section>
 
+      <SoftCollection />
+
       {/* Give */}
       <section id="give" className="scroll-mt-20 bg-night py-24 lg:py-32">
         <div className="mx-auto max-w-6xl px-5 sm:px-8">
@@ -190,10 +201,11 @@ export default function NonprofitPage() {
           <div className="mt-12">
             <DonateWidget dark />
           </div>
-          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               { t: "Volunteer", d: "Give your time and skills", h: "/donate#volunteer" },
               { t: "Partner", d: "Churches, companies, foundations", h: "/donate#partner" },
+              { t: "Donate clothing", d: "Build The Soft Collection", h: "#boutique-partners" },
               { t: "Shop", d: "Every purchase gives back", h: "/shop" },
             ].map((c) => (
               <Link key={c.t} href={c.h} className="group rounded-[2rem] border border-white/10 bg-white/5 p-7 text-white transition-colors hover:bg-white/10">

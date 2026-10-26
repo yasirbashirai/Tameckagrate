@@ -8,7 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/about", priority: 0.9, freq: "monthly" },
     { path: "/life-after", priority: 0.9, freq: "monthly" },
     { path: "/speaking", priority: 0.9, freq: "monthly" },
-    { path: "/from-survival-to-soft", priority: 0.9, freq: "monthly" },
+    { path: "/from-survivor-to-soft", priority: 0.9, freq: "monthly" },
     { path: "/donate", priority: 0.8, freq: "monthly" },
     { path: "/shop", priority: 0.8, freq: "weekly" },
   ];

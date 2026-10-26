@@ -16,7 +16,7 @@ export const site = {
   url: "https://www.tameckagrate.com",
   roles: ["Author", "Speaker", "Founder"],
   tagline: "I Aspire to Inspire", // from old site
-  nonprofit: "From Survival to Soft",
+  nonprofit: "From Survivor to Soft",
 
   // from old site (About page)
   signatureQuote:
@@ -35,7 +35,7 @@ export const nav = [
   { label: "Her Story", href: "/about" },
   { label: "Life After", href: "/life-after" },
   { label: "Speaking", href: "/speaking" },
-  { label: "The Nonprofit", href: "/from-survival-to-soft" },
+  { label: "The Nonprofit", href: "/from-survivor-to-soft" },
   { label: "Shop", href: "/shop" },
 ] as const;
 
@@ -96,7 +96,7 @@ export const timeline = [
   },
   {
     year: "Today",
-    title: "From Survival to Soft",
+    title: "From Survivor to Soft",
     text: "Speaker, author, grandmother and founder. Her work now is helping women move beyond surviving, into a life that is soft, whole and fully theirs.",
     image: "/images/cutout-gown.webp",
   },
@@ -160,7 +160,7 @@ export const donationTiers = [
   { amount: 50, impact: "a signed copy of Life After and a journal for a survivor in our program", wings: 0.7 },
   { amount: 100, impact: "a full month of peer support circle sessions for one woman", wings: 0.82 },
   { amount: 250, impact: "a restoration day: styling, portraits and a new-season wardrobe", wings: 0.92 },
-  { amount: 500, impact: "a seat for one woman at the From Survival to Soft retreat", wings: 1 },
+  { amount: 500, impact: "a seat for one woman at the From Survivor to Soft retreat", wings: 1 },
 ] as const;
 
 export type Product = {

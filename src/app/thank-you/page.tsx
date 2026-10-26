@@ -17,7 +17,7 @@ export default async function ThankYou({ searchParams }: PageProps<"/thank-you">
       <p className="mx-auto mt-5 max-w-lg text-xl text-slate-deep/80">
         {donation
           ? "Your gift is already on its way to a woman choosing life after. A receipt is in your inbox."
-          : "Your order is confirmed and a receipt is in your inbox. Every piece helps fund From Survival to Soft."}
+          : "Your order is confirmed and a receipt is in your inbox. Every piece helps fund From Survivor to Soft."}
       </p>
       <Link href="/" className="mt-10 rounded-full bg-plum px-8 py-4 font-semibold text-white">
         Back home

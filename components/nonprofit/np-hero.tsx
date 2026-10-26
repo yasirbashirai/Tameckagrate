@@ -21,7 +21,7 @@ export default function NpHero() {
 
       <div className="relative mx-auto max-w-5xl px-5 sm:px-8">
         <div className="flex justify-center">
-          <Crumbs name="From Survival to Soft" />
+          <Crumbs name="From Survivor to Soft" />
         </div>
         <Butterfly open={open} className="mx-auto mt-8 w-64 sm:w-96" />
         <motion.h1
@@ -30,7 +30,7 @@ export default function NpHero() {
           transition={{ delay: 0.6, duration: 1 }}
           className="mt-2 font-display text-6xl font-black leading-[0.9] tracking-tight text-plum-ink sm:text-8xl"
         >
-          From Survival <span className="font-script font-normal text-plum">to Soft</span>
+          From Survivor <span className="font-script font-normal text-plum">to Soft</span>
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -44,6 +44,9 @@ export default function NpHero() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1.1 }} className="mt-10 flex flex-wrap justify-center gap-3">
           <a href="#give" className="rounded-full bg-plum px-8 py-4 font-semibold text-white shadow-lg shadow-plum/30 transition-transform hover:-translate-y-0.5">
             Give today
+          </a>
+          <a href="#soft-collection" className="rounded-full bg-gold px-8 py-4 font-semibold text-white shadow-lg shadow-gold/30 transition-transform hover:-translate-y-0.5">
+            The Soft Collection
           </a>
           <Link href="/donate#volunteer" className="rounded-full border-2 border-plum px-8 py-3.5 font-semibold text-plum transition-colors hover:bg-plum hover:text-white">
             Get involved

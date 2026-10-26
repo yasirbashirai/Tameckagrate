@@ -3,7 +3,7 @@ import ShopGrid from "@components/shop-grid";
 
 export const metadata: Metadata = {
   title: "The Soft Shop",
-  description: "Signed copies of Life After, the Aspire to Inspire journal and From Survival to Soft merchandise. Every purchase supports the mission.",
+  description: "Signed copies of Life After, the Aspire to Inspire journal and From Survivor to Soft merchandise. Every purchase supports the mission.",
   alternates: { canonical: "/shop" },
 };
 
@@ -16,7 +16,7 @@ export default function ShopPage() {
           Wear the <span className="font-script font-normal text-plum">mission.</span>
         </h1>
         <p className="mx-auto mt-5 max-w-xl px-5 text-xl text-slate-deep/80">
-          Signed books, daily affirmations and pieces that say softness is strength. Every purchase funds From Survival to Soft.
+          Signed books, daily affirmations and pieces that say softness is strength. Every purchase funds From Survivor to Soft.
         </p>
       </section>
       <ShopGrid />

@@ -4,8 +4,8 @@ import Butterfly from "@components/butterfly";
 import InterestForm from "@components/interest-form";
 
 export const metadata: Metadata = {
-  title: "Donate to From Survival to Soft",
-  description: "Give once or monthly to From Survival to Soft, the nonprofit founded by Tamecka Grate to help women move from surviving to living.",
+  title: "Donate to From Survivor to Soft",
+  description: "Give once or monthly to From Survivor to Soft, the nonprofit founded by Tamecka Grate to help women move from surviving to living.",
   alternates: { canonical: "/donate" },
 };
 
@@ -24,7 +24,7 @@ export default function DonatePage() {
           <Butterfly flap />
         </div>
         <div className="relative mx-auto max-w-5xl px-5 text-center sm:px-8">
-          <p className="font-display text-sm font-bold uppercase tracking-[0.25em] text-gold">From Survival to Soft</p>
+          <p className="font-display text-sm font-bold uppercase tracking-[0.25em] text-gold">From Survivor to Soft</p>
           <h1 className="mt-4 text-balance font-display text-6xl font-black leading-[0.95] tracking-tight sm:text-8xl">
             Help her go from surviving to <span className="font-script font-normal text-rose">soft.</span>
           </h1>

@@ -63,7 +63,7 @@ export default function CartDrawer() {
               {lines.length === 0 ? (
                 <div className="flex h-full flex-col items-center justify-center text-center">
                   <p className="font-script text-4xl text-plum">Nothing here yet</p>
-                  <p className="mt-2 text-slate">Every purchase supports From Survival to Soft.</p>
+                  <p className="mt-2 text-slate">Every purchase supports From Survivor to Soft.</p>
                 </div>
               ) : (
                 <ul className="divide-y divide-line">

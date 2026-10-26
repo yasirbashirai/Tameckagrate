@@ -11,7 +11,7 @@ const rows = [
 ];
 
 /**
- * Drag the handle to move from "Survival" (night) to "Soft" (blush).
+ * Drag the handle to move from "Survivor" (night) to "Soft" (blush).
  * Both panels are stacked; the top one is clipped to the handle position.
  */
 export default function CompareSlider() {
@@ -27,7 +27,7 @@ export default function CompareSlider() {
 
   const panel = (soft: boolean) => (
     <div className={`absolute inset-0 flex flex-col justify-center gap-5 px-6 sm:px-14 ${soft ? "items-end bg-blush text-right text-plum-ink" : "items-start bg-night text-white"}`}>
-      <p className={`font-display text-xs font-bold uppercase tracking-[0.3em] ${soft ? "text-plum" : "text-gold"}`}>{soft ? "Soft" : "Survival"}</p>
+      <p className={`font-display text-xs font-bold uppercase tracking-[0.3em] ${soft ? "text-plum" : "text-gold"}`}>{soft ? "Soft" : "Survivor"}</p>
       {rows.map((r) => (
         <p key={r[0]} className={`max-w-[46%] text-lg leading-snug sm:text-2xl ${soft ? "font-script text-3xl text-plum sm:text-4xl" : "font-display font-bold"}`}>
           {soft ? r[1] : r[0]}
@@ -59,7 +59,7 @@ export default function CompareSlider() {
       <div className="absolute inset-y-0 w-[3px] -translate-x-1/2 bg-gold" style={{ left: `${pos}%` }}>
         <button
           type="button"
-          aria-label="Drag to compare survival and soft"
+          aria-label="Drag to compare survivor and soft"
           onKeyDown={(e) => {
             if (e.key === "ArrowLeft") setPos((p) => Math.max(4, p - 5));
             if (e.key === "ArrowRight") setPos((p) => Math.min(96, p + 5));

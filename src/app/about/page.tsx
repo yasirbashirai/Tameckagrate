@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: PATH,
   title: "About Tamecka Grate | Survivor, Author & Speaker, Dallas",
   description:
-    "Meet Tamecka Grate: Dallas survivor, author of the memoir Life After, 20+ year AT&T leader and founder of From Survival to Soft. Her story of faith and purpose.",
+    "Meet Tamecka Grate: Dallas survivor, author of the memoir Life After, 20+ year AT&T leader and founder of From Survivor to Soft. Her story of faith and purpose.",
   image: "/images/photo-sequin.webp",
   keywords: ["Tamecka Grate biography", "survivor speaker Dallas", "Life After author", "trauma survivor author"],
 });
@@ -25,14 +25,14 @@ const facts = [
   { k: "Education", v: "B.A. Business Administration, Northwood University" },
   { k: "Career", v: "20+ years at AT&T · Employee Relations Manager" },
   { k: "Author", v: "Life After: A Memoir of Inspiration Post Survival (2020)" },
-  { k: "Founder", v: "From Survival to Soft" },
+  { k: "Founder", v: "From Survivor to Soft" },
   { k: "Family", v: "Mother of three · Grandmother" },
 ];
 
 const faqs = [
   {
     q: "Who is Tamecka Grate?",
-    a: "Tamecka Grate is a Dallas-based author, speaker and founder of the nonprofit From Survival to Soft. She survived a violent attack in 1996 and later wrote the memoir Life After to help others rebuild after trauma.",
+    a: "Tamecka Grate is a Dallas-based author, speaker and founder of the nonprofit From Survivor to Soft. She survived a violent attack in 1996 and later wrote the memoir Life After to help others rebuild after trauma.",
   },
   {
     q: "What is Tamecka Grate's book about?",
@@ -62,7 +62,7 @@ export default function AboutPage() {
               ...personRef,
               "@type": "Person",
               name: site.name,
-              description: "Author, speaker and founder of From Survival to Soft.",
+              description: "Author, speaker and founder of From Survivor to Soft.",
               image: abs("/images/photo-front.webp"),
               jobTitle: ["Author", "Speaker", "Founder", "Employee Relations Manager"],
               worksFor: { "@type": "Organization", name: "AT&T" },
@@ -157,8 +157,8 @@ export default function AboutPage() {
               <h2 className="mt-16 font-display text-4xl font-extrabold tracking-tight text-plum-ink sm:text-5xl">Why soft</h2>
               <p className="mt-6">
                 Surviving taught her strength. Living taught her softness. Today Tamecka speaks, writes and leads{" "}
-                <a href="/from-survival-to-soft" className="font-semibold text-plum underline-offset-4 hover:underline">
-                  From Survival to Soft
+                <a href="/from-survivor-to-soft" className="font-semibold text-plum underline-offset-4 hover:underline">
+                  From Survivor to Soft
                 </a>{" "}
                 with one goal: to let every survivor know that you, too, can overcome anything, and that the life
                 waiting on the other side can be gentle, beautiful and fully yours.

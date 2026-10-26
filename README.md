@@ -1,7 +1,7 @@
 # Tamecka Grate: Website
 
 New website for **Tamecka Grate** (author of *Life After*, speaker, founder of
-**From Survival to Soft**). Replaces the 2020 Wix site at tameckafrazier.com.
+**From Survivor to Soft**). Replaces the 2020 Wix site at tameckafrazier.com.
 
 Package: **The Full Experience ($650)**. Scope and design rules are in the proposal:
 `../tamecka-frazier-proposal/proposal.html`.
@@ -28,11 +28,11 @@ content-source/     original files from client + old Wix site (not deployed)
 ## Pages
 | Route | What |
 |---|---|
-| `/` | v2 homepage: intro, magazine hero, Survival→Soft morph, story chapters, journey, 3D book, quote, nonprofit + giving, speaking + booking form, shop rail, eBook |
+| `/` | v2 homepage: intro, magazine hero, Survivor→Soft morph, story chapters, journey, 3D book, quote, nonprofit + giving, speaking + booking form, shop rail, eBook |
 | `/about` | her full story, fact sheet, values, press, FAQ |
 | `/life-after` | book page: tunnel-light hero, back-cover pages, buy (3D book), book clubs, FAQ |
 | `/speaking` | stage hero, signature talks, formats, booking process + form, planner FAQ |
-| `/from-survival-to-soft` | nonprofit: founder letter, survival↔soft slider, programs, giving, FAQ |
+| `/from-survivor-to-soft` | nonprofit: founder letter, survivor↔soft slider, programs, giving, FAQ |
 | `/shop` | filterable shop + cart drawer |
 | `/donate` | giving widget, allocation, volunteer + partner forms |
 | `/thank-you` | Stripe success page |

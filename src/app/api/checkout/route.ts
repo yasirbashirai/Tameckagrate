@@ -29,7 +29,7 @@ export async function POST(req: Request) {
     params.set("line_items[0][quantity]", "1");
     params.set("line_items[0][price_data][currency]", "usd");
     params.set("line_items[0][price_data][unit_amount]", String(amount));
-    params.set("line_items[0][price_data][product_data][name]", `${monthly ? "Monthly gift" : "Gift"} to From Survival to Soft`);
+    params.set("line_items[0][price_data][product_data][name]", `${monthly ? "Monthly gift" : "Gift"} to From Survivor to Soft`);
     if (monthly) params.set("line_items[0][price_data][recurring][interval]", "month");
     else params.set("submit_type", "donate");
   } else {

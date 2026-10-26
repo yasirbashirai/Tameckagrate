@@ -8,7 +8,7 @@ const steps = [
   { step: "Survived", line: "This happened to me.", body: "The night that should have ended everything became the first page.", bg: "#1f2731", fg: "#f5e9f0" },
   { step: "Softened", line: "Here's what I learned.", body: "Healing wasn't seamless, but it was always purposeful.", bg: "#333f4e", fg: "#f5e9f0" },
   { step: "Spoke", line: "Now I say it out loud.", body: "From boardrooms to sanctuaries, her story gives others permission to tell theirs.", bg: "#5b3455", fg: "#f5e9f0" },
-  { step: "Served", line: "Now I lift others.", body: "From Survival to Soft walks with women from surviving to living.", bg: "#7e4a76", fg: "#fbf8f4" },
+  { step: "Served", line: "Now I lift others.", body: "From Survivor to Soft walks with women from surviving to living.", bg: "#7e4a76", fg: "#fbf8f4" },
   { step: "Shined", line: "And I get to be beautiful too.", body: "Softness, style and joy are not luxuries. They are restoration.", bg: "#e8cfe0", fg: "#5b3455" },
   { step: "Shared", line: "Come with me.", body: "Read the book. Join the circle. Bring her to your stage.", bg: "#fbf8f4", fg: "#5b3455" },
 ];

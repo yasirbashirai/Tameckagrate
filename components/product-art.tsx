@@ -49,7 +49,7 @@ export default function ProductArt({ product, className = "" }: { product: Produ
             <path d="M60 92 L240 92 L228 275 L72 275 Z" fill="#F3ECE3" stroke="#DFD5CB" strokeWidth="2" />
             <image href="/images/fsts-mark.webp" x="92" y="125" width="116" height="81" />
             <text x="150" y="238" textAnchor="middle" fontFamily="var(--font-archivo)" fontWeight="700" fontSize="13" letterSpacing="2" fill="#5B6878">
-              FROM SURVIVAL
+              FROM SURVIVOR
             </text>
             <text x="150" y="258" textAnchor="middle" fontFamily="var(--font-script-face)" fontSize="24" fill="#9B5B8E">
               to Soft

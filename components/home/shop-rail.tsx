@@ -30,7 +30,7 @@ export default function ShopRail() {
             <h2 className="mt-4 font-display text-5xl font-extrabold tracking-tight text-plum-ink sm:text-7xl">
               Wear the <span className="font-script font-normal text-plum">mission.</span>
             </h2>
-            <p className="mt-4 max-w-md text-lg text-slate-deep/80">Every purchase helps fund From Survival to Soft.</p>
+            <p className="mt-4 max-w-md text-lg text-slate-deep/80">Every purchase helps fund From Survivor to Soft.</p>
           </div>
           <Link href="/shop" className="rounded-full border-2 border-plum px-7 py-3 font-semibold text-plum transition-colors hover:bg-plum hover:text-white">
             Visit the shop →

@@ -11,7 +11,7 @@ import { site } from "@/lib/site";
 const chips = [
   { text: "Author of Life After", className: "left-[4%] top-[34%] lg:left-[10%]", depth: 28 },
   { text: "Keynote Speaker", className: "right-[3%] top-[26%] lg:right-[12%]", depth: -22 },
-  { text: "Founder · From Survival to Soft", className: "right-[2%] top-[58%] lg:right-[7%]", depth: 36 },
+  { text: "Founder · From Survivor to Soft", className: "right-[2%] top-[58%] lg:right-[7%]", depth: 36 },
 ];
 
 /**

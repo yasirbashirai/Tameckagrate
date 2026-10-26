@@ -12,7 +12,7 @@ const pillars = [
   { title: "Rise", text: "Mentorship and opportunity so survivors can lead, and lift the next woman." },
 ];
 
-/** From Survival to Soft: mission, three pillars, and live giving. */
+/** From Survivor to Soft: mission, three pillars, and live giving. */
 export default function Nonprofit() {
   return (
     <section id="nonprofit" className="relative overflow-hidden bg-blush py-28 lg:py-36">
@@ -20,7 +20,7 @@ export default function Nonprofit() {
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <div className="grid items-end gap-10 lg:grid-cols-[1fr_auto]">
           <div>
-            <Image src="/images/fsts-logo.webp" alt="From Survival to Soft" width={1000} height={1000} className="-ml-6 h-auto w-56 sm:w-72" />
+            <Image src="/images/fsts-logo.webp" alt="From Survivor to Soft" width={1000} height={1000} className="-ml-6 h-auto w-56 sm:w-72" />
             <h2 className="mt-2 max-w-3xl text-balance font-display text-5xl font-extrabold leading-[0.95] tracking-tight text-plum-ink sm:text-7xl">
               Surviving was never meant to be <span className="font-script font-normal text-plum">the end.</span>
             </h2>

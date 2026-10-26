@@ -3,7 +3,7 @@ import Link from "next/link";
 const doors = [
   { href: "/life-after", eyebrow: "The Memoir", title: "Read Life After", bg: "bg-plum-ink text-white" },
   { href: "/speaking", eyebrow: "Speaking", title: "Book Tamecka", bg: "bg-gold text-white" },
-  { href: "/from-survival-to-soft", eyebrow: "The Nonprofit", title: "Support the mission", bg: "bg-blush text-plum-ink" },
+  { href: "/from-survivor-to-soft", eyebrow: "The Nonprofit", title: "Support the mission", bg: "bg-blush text-plum-ink" },
 ];
 
 /** Closing "where next" doors, used at the end of inner pages. `except` hides the current page. */

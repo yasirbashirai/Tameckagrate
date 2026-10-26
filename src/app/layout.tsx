@@ -10,7 +10,7 @@ import Preloader from "@components/preloader";
 import { site, book } from "@/lib/site";
 import "./globals.css";
 
-// Archivo loaded as a variable font WITH the width axis: powers the Survival → Soft morph
+// Archivo loaded as a variable font WITH the width axis: powers the Survivor → Soft morph
 const archivo = Archivo({ variable: "--font-archivo", subsets: ["latin"], axes: ["wdth"] });
 const sourceSans = Source_Sans_3({ variable: "--font-source-sans", subsets: ["latin"] });
 const script = Allura({ variable: "--font-script-face", subsets: ["latin"], weight: "400" });
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.name}`,
   },
   description:
-    "Tamecka Grate is a Dallas author, speaker and founder of From Survival to Soft. Read her memoir Life After, book her to speak, shop, and support women rebuilding their lives.",
+    "Tamecka Grate is a Dallas author, speaker and founder of From Survivor to Soft. Read her memoir Life After, book her to speak, shop, and support women rebuilding their lives.",
   openGraph: {
     type: "website",
     siteName: site.name,

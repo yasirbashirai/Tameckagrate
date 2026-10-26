@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform, useMotionTemplate, type MotionValue } 
 import Butterfly from "@components/butterfly";
 
 /**
- * Signature moment: "SURVIVAL" set heavy, condensed and hard. As you scroll
+ * Signature moment: "SURVIVOR" set heavy, condensed and hard. As you scroll
  * it literally softens (variable font weight + width), the room turns from
  * night to blush, and it dissolves into "Soft". Her whole brand in one scroll.
  */
@@ -13,7 +13,7 @@ export default function Morph() {
   const ref = useRef<HTMLElement>(null);
   const { scrollYProgress: p } = useScroll({ target: ref, offset: ["start start", "end end"] });
 
-  // SURVIVAL: 900 weight / 62 width → 200 weight / 125 width, then fades out
+  // SURVIVOR: 900 weight / 62 width → 200 weight / 125 width, then fades out
   const wght = useTransform(p, [0.05, 0.5], [900, 200]);
   const wdth = useTransform(p, [0.05, 0.5], [62, 125]);
   const settings = useMotionTemplate`"wght" ${wght}, "wdth" ${wdth}`;
@@ -38,7 +38,7 @@ export default function Morph() {
     <motion.section ref={ref} style={{ backgroundColor: bg }} className="relative h-[320vh]">
       <div className="sticky top-0 flex h-screen flex-col items-center justify-center overflow-hidden">
         <motion.p style={{ opacity: line1, color: ink }} className="absolute top-[22%] px-6 text-center font-display text-sm font-bold uppercase tracking-[0.3em] sm:text-base">
-          Survival is what happened to me
+          Survivor is who I had to be
         </motion.p>
 
         <div className="relative flex w-full items-center justify-center">
@@ -47,7 +47,7 @@ export default function Morph() {
             className="whitespace-nowrap font-display text-[16vw] leading-none sm:text-[13vw]"
             aria-hidden="true"
           >
-            SURVIVAL
+            SURVIVOR
           </motion.p>
 
           <motion.div style={{ opacity: softOpacity, scale: softScale }} className="absolute flex flex-col items-center">
@@ -59,11 +59,11 @@ export default function Morph() {
         <motion.div style={{ opacity: line2 }} className="absolute bottom-[14%] px-6 text-center">
           <p className="font-display text-sm font-bold uppercase tracking-[0.3em] text-slate">Soft is what I chose</p>
           <p className="mx-auto mt-4 max-w-md text-lg text-slate-deep/80">
-            From Survival to Soft is more than a name. It&apos;s the journey every woman deserves to finish.
+            From Survivor to Soft is more than a name. It&apos;s the journey every woman deserves to finish.
           </p>
         </motion.div>
 
-        <h2 className="sr-only">From survival to soft</h2>
+        <h2 className="sr-only">From survivor to soft</h2>
       </div>
     </motion.section>
   );
