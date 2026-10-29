@@ -83,9 +83,9 @@ export const timeline = [
     dark: true,
   },
   {
-    year: "20+ yrs",
+    year: "26+ yrs",
     title: "A leader for people",
-    text: "Two decades at AT&T, rising to Employee Relations Manager. She learned how organizations care for people, and where they fall short.",
+    text: "A 26+ year journey at AT&T, the last five as an Employee Relations Manager. She learned how organizations care for people, and where they fall short.",
     image: "/images/cutout-chair.webp",
   },
   {
@@ -142,7 +142,7 @@ export const speakingTopics = [
   },
   {
     title: "Seen, Not Looked At",
-    text: "Two decades in Employee Relations, on supporting survivors in the workplace.",
+    text: "26+ years at AT&T, including five in Employee Relations, on supporting survivors in the workplace.",
     audience: "Corporate · HR · Wellness programs",
     image: "/images/cutout-chair.webp",
   },

@@ -103,7 +103,7 @@ export default function NonprofitPage() {
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 sm:px-8 lg:grid-cols-[0.9fr_1.1fr]">
           <Reveal>
             <div className="relative mx-auto flex h-[520px] max-w-md items-end justify-center overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-blush to-rose">
-              <Image src="/images/cutout-gown.webp" alt="Tamecka Grate, founder of From Survivor to Soft" width={282} height={554} className="h-[92%] w-auto object-contain" />
+              <Image src="/images/cutout-black-gown.webp" alt="Tamecka Grate, founder of From Survivor to Soft" width={255} height={907} className="h-[92%] w-auto object-contain" />
               <span className="absolute left-6 top-6 rounded-full bg-white/80 px-4 py-2 text-sm font-bold text-plum-ink backdrop-blur">Founder</span>
             </div>
           </Reveal>

@@ -14,7 +14,7 @@ export const metadata = pageMetadata({
   path: PATH,
   title: "About Tamecka Grate | Survivor, Author & Speaker, Dallas",
   description:
-    "Meet Tamecka Grate: Dallas survivor, author of the memoir Life After, 20+ year AT&T leader and founder of From Survivor to Soft. Her story of faith and purpose.",
+    "Meet Tamecka Grate: Dallas survivor, author of the memoir Life After, 26+ year AT&T leader and founder of From Survivor to Soft. Her story of faith and purpose.",
   image: "/images/photo-sequin.webp",
   keywords: ["Tamecka Grate biography", "survivor speaker Dallas", "Life After author", "trauma survivor author"],
 });
@@ -23,7 +23,7 @@ export const metadata = pageMetadata({
 const facts = [
   { k: "Hometown", v: "Dallas, Texas" },
   { k: "Education", v: "B.A. Business Administration, Northwood University" },
-  { k: "Career", v: "20+ years at AT&T · Employee Relations Manager" },
+  { k: "Career", v: "26+ years at AT&T · Employee Relations Manager" },
   { k: "Author", v: "Life After: A Memoir of Inspiration Post Survival (2020)" },
   { k: "Founder", v: "From Survivor to Soft" },
   { k: "Family", v: "Mother of three · Grandmother" },
@@ -40,7 +40,7 @@ const faqs = [
   },
   {
     q: "What does Tamecka Grate do professionally?",
-    a: "Alongside writing and speaking, she has spent more than two decades at AT&T, where she is an Employee Relations Manager in the Human Resources division.",
+    a: "Alongside writing and speaking, she has built a 26+ year career at AT&T, where for the last five years she has served as an Employee Relations Manager in the Human Resources division.",
   },
   {
     q: "Is Tamecka Grate available to speak at events?",
@@ -116,9 +116,9 @@ export default function AboutPage() {
               <p className="mt-8 first-letter:float-left first-letter:mr-3 first-letter:font-display first-letter:text-8xl first-letter:font-black first-letter:leading-[0.8] first-letter:text-plum">
                 Tamecka Grate is a native of Dallas, Texas. She was educated in the Wilmer Hutchins Independent School
                 District and went on to earn her bachelor&apos;s degree in Business Administration from Northwood
-                University. She built a long career at AT&amp;T, where for more than twenty years she has worked with
-                people at their most difficult moments, today as an Employee Relations Manager in the Human Resources
-                division.
+                University. She has built a 26+ year career at AT&amp;T, growing through the company and working with people
+                at every stage, and for the last five years has served as an Employee Relations Manager in the Human
+                Resources division.
               </p>
             </Reveal>
 

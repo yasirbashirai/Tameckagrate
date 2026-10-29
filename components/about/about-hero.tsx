@@ -48,7 +48,7 @@ export default function AboutHero() {
             transition={{ delay: 0.7 }}
             className="mt-7 max-w-xl text-xl leading-relaxed text-slate-deep/85"
           >
-            A Dallas native, a corporate leader of more than two decades, the author of <em>Life After</em> and the
+            A Dallas native, a 26+ year AT&amp;T leader, the author of <em>Life After</em> and the
             founder of From Survivor to Soft. Tamecka survived what should have ended her life, and turned it into
             a purpose: showing others what life after looks like.
           </motion.p>

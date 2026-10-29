@@ -23,7 +23,7 @@ const audiences = ["Corporate wellness", "Faith conferences", "Universities", "W
 
 const reasons = [
   { title: "A story no one forgets", text: "A documented medical miracle, told with honesty and grace, never for shock." },
-  { title: "Fluent in corporate", text: "Two decades in Employee Relations means she speaks the language of leaders and HR." },
+  { title: "Fluent in corporate", text: "A 26+ year career at AT&T, including five in Employee Relations, means she speaks the language of leaders and HR." },
   { title: "Grounded in faith", text: "A testimony that meets faith audiences where they are, and welcomes everyone else." },
   { title: "Hope, not heaviness", text: "Trauma-aware storytelling that leaves rooms lighter, not drained." },
 ];

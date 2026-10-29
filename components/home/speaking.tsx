@@ -7,7 +7,7 @@ import { press, speakingTopics } from "@/lib/site";
 
 /** Real proof points (no invented numbers). */
 const proof = [
-  { big: "20+", small: "years leading people in Employee Relations at AT&T" },
+  { big: "26+", small: "year career at AT&T, the last 5 in Employee Relations" },
   { big: "1996", small: "survived an attack doctors called a miracle" },
   { big: "2020", small: "published author of Life After" },
   { big: "DFW", small: "featured on 97.9 The Beat · Femme Fridays" },
