@@ -29,7 +29,7 @@ export default function CompareSlider() {
     <div className={`absolute inset-0 flex flex-col justify-center gap-5 px-6 sm:px-14 ${soft ? "items-end bg-blush text-right text-plum-ink" : "items-start bg-night text-white"}`}>
       <p className={`font-display text-xs font-bold uppercase tracking-[0.3em] ${soft ? "text-plum" : "text-gold"}`}>{soft ? "Soft" : "Survivor"}</p>
       {rows.map((r) => (
-        <p key={r[0]} className={`max-w-[46%] text-lg leading-snug sm:text-2xl ${soft ? "font-script text-3xl text-plum sm:text-4xl" : "font-display font-bold"}`}>
+        <p key={r[0]} className={`leading-snug ${soft ? "max-w-[48%] font-script text-[1.75rem] text-plum [-webkit-text-stroke:0.9px_currentColor] sm:text-5xl" : "max-w-[46%] font-display text-lg font-bold sm:text-2xl"}`}>
           {soft ? r[1] : r[0]}
         </p>
       ))}
@@ -40,7 +40,7 @@ export default function CompareSlider() {
     <div
       ref={box}
       data-cursor="Drag"
-      className="relative h-[520px] touch-pan-y select-none overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_-40px_rgba(31,39,49,0.6)]"
+      className="relative h-[560px] touch-pan-y sm:h-[600px] select-none overflow-hidden rounded-[2.5rem] shadow-[0_40px_80px_-40px_rgba(31,39,49,0.6)]"
       onPointerDown={(e) => {
         dragging.current = true;
         (e.target as HTMLElement).setPointerCapture?.(e.pointerId);
