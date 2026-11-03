@@ -1,4 +1,6 @@
 import type { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
 import { site } from "@/lib/site";
 
 /** /robots.txt: allow everything public (incl. AI search crawlers), hide API + thank-you. */

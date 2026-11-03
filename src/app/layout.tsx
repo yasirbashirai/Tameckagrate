@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: site.name,
     images: ["/images/photo-front.webp"],
   },
-  twitter: { card: "summary_large_image", images: ["/images/photo-front.webp"] },
+  twitter: { card: "summary_large_image", site: "@TameckaKGrate", creator: "@TameckaKGrate", images: ["/images/photo-front.webp"] },
   robots: { index: true, follow: true },
 };
 

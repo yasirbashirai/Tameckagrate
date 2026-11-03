@@ -34,6 +34,8 @@ export function pageMetadata({
     },
     twitter: {
       card: "summary_large_image",
+      site: "@TameckaKGrate",
+      creator: "@TameckaKGrate",
       title,
       description,
       images: [image],

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# static deploy build
+/.next-export/
+/.api-parked/
+/deploy/tameckagrate-site/
+/deploy/tameckagrate-site.zip

@@ -26,7 +26,7 @@ export const site = {
   socials: {
     facebook: "https://www.facebook.com/tameckafrazier",
     instagram: "https://www.instagram.com/tamecka_frazier",
-    twitter: "https://twitter.com/TameckaF",
+    twitter: "https://x.com/TameckaKGrate",
   },
 } as const;
 
