@@ -24,19 +24,26 @@ export default function ProductCard({ product, className = "" }: { product: Prod
           </span>
         )}
         <ProductArt product={product} className="h-full w-full transition-transform duration-700 group-hover:scale-105" />
-        <button
-          onClick={() => add(product.id)}
-          className="absolute inset-x-4 bottom-4 translate-y-0 rounded-full bg-plum-ink py-3.5 font-semibold text-white opacity-100 transition-all duration-300 hover:bg-plum lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100"
-        >
-          Add to bag · {money(product.price)}
-        </button>
+        {/* Merchandise that is not finalised yet shows a "Coming soon" pill instead of add-to-bag */}
+        {product.comingSoon ? (
+          <span className="absolute inset-x-4 bottom-4 rounded-full bg-white/85 py-3.5 text-center font-semibold text-plum-ink backdrop-blur">
+            Coming soon
+          </span>
+        ) : (
+          <button
+            onClick={() => add(product.id)}
+            className="absolute inset-x-4 bottom-4 translate-y-0 rounded-full bg-plum-ink py-3.5 font-semibold text-white opacity-100 transition-all duration-300 hover:bg-plum lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100"
+          >
+            Add to bag · {money(product.price)}
+          </button>
+        )}
       </div>
       <div className="mt-4 flex items-start justify-between gap-3 px-1">
         <div>
           <h3 className="font-display text-lg font-bold leading-snug text-plum-ink">{product.name}</h3>
           <p className="mt-1 text-sm text-slate">{product.blurb}</p>
         </div>
-        <p className="font-display text-lg font-bold text-plum">{money(product.price)}</p>
+        {!product.comingSoon && <p className="font-display text-lg font-bold text-plum">{money(product.price)}</p>}
       </div>
     </motion.article>
   );

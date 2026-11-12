@@ -19,7 +19,7 @@ mv .next-export "$OUT"
 cp -R deploy/php/. "$OUT/"
 
 # Shop prices for the PHP checkout, straight from src/lib/site.ts
-node --experimental-strip-types --no-warnings -e 'import("./src/lib/site.ts").then(({ products }) => console.log(JSON.stringify(products.map(({ id, name, price }) => ({ id, name, price })), null, 2)))' > "$OUT/api/products.json"
+node --experimental-strip-types --no-warnings -e 'import("./src/lib/site.ts").then(({ products }) => console.log(JSON.stringify(products.filter((p) => !p.comingSoon).map(({ id, name, price }) => ({ id, name, price })), null, 2)))' > "$OUT/api/products.json"
 
 (cd "$OUT" && zip -qr ../tameckagrate-site.zip . -x '.DS_Store')
 echo "Built $OUT and $OUT.zip"

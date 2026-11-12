@@ -36,7 +36,7 @@ export async function POST(req: Request) {
     const items: { id: string; qty: number }[] = Array.isArray(body.items) ? body.items : [];
     const lines = items
       .map((i) => ({ product: products.find((p) => p.id === i.id), qty: Math.min(20, Math.max(1, Math.floor(Number(i.qty) || 0))) }))
-      .filter((l) => l.product);
+      .filter((l) => l.product && !l.product.comingSoon);
     if (!lines.length) return NextResponse.json({ message: "Your bag is empty." }, { status: 400 });
 
     params.set("mode", "payment");

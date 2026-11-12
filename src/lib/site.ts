@@ -172,6 +172,8 @@ export type Product = {
   image?: string;
   art?: "tee" | "tote" | "mug" | "candle";
   badge?: string;
+  /** Not for sale yet: card shows "Coming soon", no price, cannot be added to the bag. */
+  comingSoon?: boolean;
 };
 
 /** DRAFT shop catalogue. Prices + merch designs to be confirmed. */
@@ -209,6 +211,7 @@ export const products: Product[] = [
     category: "Apparel",
     blurb: "Heavyweight cotton in cream, butterfly on the back.",
     art: "tee",
+    comingSoon: true,
   },
   {
     id: "butterfly-tote",
@@ -217,6 +220,7 @@ export const products: Product[] = [
     category: "Gifts",
     blurb: "Carry the mission. Every tote funds a Soft Start care kit.",
     art: "tote",
+    comingSoon: true,
     badge: "Gives back",
   },
   {
@@ -226,6 +230,7 @@ export const products: Product[] = [
     category: "Gifts",
     blurb: "Your morning affirmation, in plum and gold.",
     art: "mug",
+    comingSoon: true,
   },
 ];
 
