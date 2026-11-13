@@ -45,3 +45,6 @@ next-env.d.ts
 /.api-parked/
 /deploy/tameckagrate-site/
 /deploy/tameckagrate-site.zip
+
+# settings saved from /admin during local dev
+/.data/

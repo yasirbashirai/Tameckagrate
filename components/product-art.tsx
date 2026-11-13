@@ -6,6 +6,15 @@ import type { Product } from "@/lib/site";
  * mockups until real product photography exists (swap `image` in site.ts).
  */
 export default function ProductArt({ product, className = "" }: { product: Product; className?: string }) {
+  // Lifestyle product photos (shop-*.webp) fill the whole card
+  if (product.image?.includes("/shop-")) {
+    return (
+      <div className={`relative overflow-hidden rounded-[inherit] ${className}`}>
+        <Image src={product.image} alt={product.name} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
+      </div>
+    );
+  }
+
   if (product.image) {
     const isCover = product.image.includes("book-cover");
     return (
@@ -66,6 +75,25 @@ export default function ProductArt({ product, className = "" }: { product: Produ
             </text>
             <text x="142" y="208" textAnchor="middle" fontFamily="var(--font-script-face)" fontSize="34" fill="#D9BD85">
               Inspire
+            </text>
+          </g>
+        )}
+        {product.art === "journal" && (
+          <g>
+            {/* Page edges, cover, gold elastic band */}
+            <rect x="78" y="34" width="156" height="240" rx="8" fill="#F3ECE3" stroke="#DFD5CB" strokeWidth="2" />
+            <rect x="66" y="28" width="160" height="244" rx="10" fill="#7E4A76" />
+            <rect x="66" y="28" width="18" height="244" rx="8" fill="#5B3455" />
+            <rect x="209" y="28" width="6" height="244" fill="#B58F45" />
+            <image href="/images/fsts-mark.webp" x="97" y="70" width="90" height="63" style={{ filter: "brightness(0) invert(1)" }} />
+            <text x="142" y="172" textAnchor="middle" fontFamily="var(--font-archivo)" fontWeight="700" fontSize="10" letterSpacing="1.5" fill="#F5E9F0">
+              FROM SURVIVOR
+            </text>
+            <text x="142" y="200" textAnchor="middle" fontFamily="var(--font-script-face)" fontSize="30" fill="#D9BD85">
+              to Soft
+            </text>
+            <text x="142" y="238" textAnchor="middle" fontFamily="var(--font-archivo)" fontWeight="600" fontSize="9" letterSpacing="3" fill="#F5E9F0" opacity="0.7">
+              JOURNAL
             </text>
           </g>
         )}

@@ -51,7 +51,7 @@ export async function POST(req: Request) {
 
   if (!key) {
     return NextResponse.json({
-      message: "Preview mode: secure checkout switches on once Tamecka's Stripe account is connected. Nothing was charged.",
+      message: "Preview mode: secure checkout switches on once Tamecka's payment account is connected. Nothing was charged.",
     });
   }
 

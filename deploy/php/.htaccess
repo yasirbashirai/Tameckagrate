@@ -15,7 +15,7 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteRule ^from-survival-to-soft(/.*)?$ /from-survivor-to-soft/ [L,R=301]
 
 # Pretty API URLs used by the site: /api/contact -> /api/contact.php
-RewriteRule ^api/(contact|subscribe|checkout)/?$ api/$1.php [L]
+RewriteRule ^api/(contact|subscribe|checkout|settings|admin)/?$ api/$1.php [L]
 
 # Pages without a trailing slash: /about -> /about/
 RewriteCond %{REQUEST_FILENAME} !-f

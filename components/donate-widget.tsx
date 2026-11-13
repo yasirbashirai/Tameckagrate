@@ -4,6 +4,8 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import Butterfly from "@components/butterfly";
 import { donationTiers, money } from "@/lib/site";
+import { paypalDonate } from "@/lib/paypal";
+import { usePublicSettings } from "@/lib/settings";
 
 /**
  * Interactive giving: pick an amount (or type one), once or monthly.
@@ -13,7 +15,12 @@ import { donationTiers, money } from "@/lib/site";
 export default function DonateWidget({ dark = false }: { dark?: boolean }) {
   const [amount, setAmount] = useState<number>(100);
   const [custom, setCustom] = useState("");
-  const [monthly, setMonthly] = useState(true);
+  const [monthlyPick, setMonthly] = useState(true);
+  const settings = usePublicSettings();
+  const paypalOn = Boolean(settings.paypalEmail);
+  // With PayPal, monthly gifts can be switched off in /admin (they need a PayPal Business account)
+  const canMonthly = !paypalOn || settings.monthlyGiving;
+  const monthly = monthlyPick && canMonthly;
   const [busy, setBusy] = useState(false);
   const [note, setNote] = useState("");
 
@@ -26,6 +33,8 @@ export default function DonateWidget({ dark = false }: { dark?: boolean }) {
     if (value < 1) return setNote("Please enter an amount.");
     setBusy(true);
     setNote("");
+    // PayPal is the active payment method while its email is saved in /admin
+    if (paypalOn) return paypalDonate(settings.paypalEmail, value, monthly);
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
@@ -75,7 +84,7 @@ export default function DonateWidget({ dark = false }: { dark?: boolean }) {
       {/* Controls */}
       <div className="p-7 sm:p-10">
         {/* Once / monthly toggle */}
-        <div className={`relative grid grid-cols-2 rounded-full p-1 ${dark ? "bg-white/10" : "bg-blush"}`}>
+        <div className={`relative grid-cols-2 rounded-full p-1 ${canMonthly ? "grid" : "hidden"} ${dark ? "bg-white/10" : "bg-blush"}`}>
           {[
             { label: "Give monthly", v: true },
             { label: "Give once", v: false },
@@ -133,7 +142,7 @@ export default function DonateWidget({ dark = false }: { dark?: boolean }) {
             <rect x="5" y="11" width="14" height="10" rx="2" />
             <path d="M8 11V7a4 4 0 0 1 8 0v4" />
           </svg>
-          Secure checkout · Cards, Apple Pay &amp; Google Pay
+          {paypalOn ? "Secure checkout with PayPal · Cards accepted" : "Secure checkout · Cards, Apple Pay & Google Pay"}
         </p>
       </div>
     </div>

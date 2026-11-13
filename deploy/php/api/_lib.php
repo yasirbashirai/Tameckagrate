@@ -6,6 +6,23 @@ header('X-Robots-Tag: noindex');
 
 $config = require __DIR__ . '/config.php';
 
+/** Settings saved from the /admin page (kept in data/, which is blocked from the web). */
+function load_settings(): array
+{
+    $saved = json_decode(@file_get_contents(__DIR__ . '/data/settings.json') ?: '', true);
+    return (is_array($saved) ? $saved : []) + ['paypalEmail' => '', 'monthlyGiving' => true, 'inboxEmail' => '', 'ebookUrl' => ''];
+}
+
+function save_settings(array $settings): bool
+{
+    return @file_put_contents(__DIR__ . '/data/settings.json', json_encode($settings, JSON_PRETTY_PRINT), LOCK_EX) !== false;
+}
+
+// Values saved in /admin win over the defaults in config.php
+$settings = load_settings();
+if ($settings['inboxEmail']) $config['to_email'] = $settings['inboxEmail'];
+if ($settings['ebookUrl']) $config['ebook_url'] = $settings['ebookUrl'];
+
 /** Send a JSON response and stop. */
 function respond(array $data, int $status = 200): void
 {

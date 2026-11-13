@@ -5,16 +5,28 @@ import { AnimatePresence, motion } from "motion/react";
 import { useCart } from "@components/cart";
 import ProductArt from "@components/product-art";
 import { money } from "@/lib/site";
+import { paypalCart } from "@/lib/paypal";
+import { usePublicSettings } from "@/lib/settings";
 
-/** Slide-in cart. Checkout posts the cart to /api/checkout (Stripe Checkout). */
+/** Slide-in cart. Checkout goes to PayPal when set up, otherwise /api/checkout (Stripe). */
 export default function CartDrawer() {
   const { lines, subtotal, open, setOpen, setQty } = useCart();
   const [busy, setBusy] = useState(false);
   const [note, setNote] = useState("");
+  const { paypalEmail } = usePublicSettings();
+  const paypalOn = Boolean(paypalEmail);
 
   async function checkout() {
     setBusy(true);
     setNote("");
+    // PayPal is the active payment method while its email is saved in /admin
+    if (paypalOn) {
+      if (!paypalCart(paypalEmail, lines.map((l) => ({ id: l.id, qty: l.qty })))) {
+        setNote("Your bag is empty.");
+        setBusy(false);
+      }
+      return;
+    }
     try {
       const res = await fetch("/api/checkout", {
         method: "POST",
@@ -104,7 +116,7 @@ export default function CartDrawer() {
                   disabled={busy}
                   className="mt-5 w-full rounded-full bg-plum py-4 font-semibold text-white transition-colors hover:bg-plum-deep disabled:opacity-60"
                 >
-                  {busy ? "Opening secure checkout…" : "Checkout securely"}
+                  {busy ? "Opening secure checkout…" : paypalOn ? "Checkout with PayPal" : "Checkout securely"}
                 </button>
                 {note && <p className="mt-3 rounded-xl bg-blush px-4 py-3 text-sm text-plum-ink">{note}</p>}
               </div>

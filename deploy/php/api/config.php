@@ -16,6 +16,13 @@ return [
     // Leave empty to keep the shop + donations in safe preview mode (nothing is charged).
     'stripe_secret_key' => '',
 
+    // Login for the settings page at /admin (PayPal email, inbox email, eBook link).
+    // The password is stored scrambled (a hash), never in plain text. A plain password
+    // also works here if you ever need to reset it. Empty = /admin switched off.
+    // It can be changed later inside /admin.
+    'admin_user'     => 'tameckagrate',
+    'admin_password' => '$2y$10$1AKPM1mguIQz5rt2uOzx1uXFCYJ4ZGY61yOSHSgbnthobv38Ca04G',
+
     // Link to the free "Aspire to Inspire" eBook PDF, emailed to new subscribers.
     // e.g. upload the PDF to /downloads/ and put 'https://www.tameckagrate.com/downloads/aspire-to-inspire.pdf'
     // Leave empty to send the welcome email without a download link.

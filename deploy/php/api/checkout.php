@@ -55,7 +55,7 @@ if ($donation) {
 }
 
 if (empty($config['stripe_secret_key'])) {
-    respond(['message' => "Preview mode: secure checkout switches on once Tamecka's Stripe account is connected. Nothing was charged."]);
+    respond(['message' => "Preview mode: secure checkout switches on once Tamecka's payment account is connected. Nothing was charged."]);
 }
 
 $ch = curl_init('https://api.stripe.com/v1/checkout/sessions');

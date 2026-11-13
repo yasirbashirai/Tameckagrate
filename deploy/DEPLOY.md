@@ -17,11 +17,22 @@ The site is now live. Every page, the favicon, the old `/from-survival-to-soft` 
 | `from_email` | An address on the domain, e.g. `no-reply@tameckagrate.com` |
 | `stripe_secret_key` | Her Stripe **live secret key** (`sk_live_…`). Empty = shop + donations stay in safe preview mode |
 | `ebook_url` | Link to the Aspire to Inspire PDF (upload it to `public_html/downloads/`) so new subscribers get it by email |
+| `admin_user` / `admin_password` | Login for the settings page at `/admin`. Already set (password stored as a hash). Empty password = `/admin` switched off |
+
+## 3. Settings page for Tamecka: `/admin`
+She can log in at `https://www.tameckagrate.com/admin` and manage, with no file editing:
+- **PayPal email**: book orders + donations go straight to that PayPal account (empty = payments paused, preview mode)
+- **Monthly donations** on/off (needs a PayPal Business account)
+- **Inbox email** and **eBook link** (these override `to_email` / `ebook_url` above)
+- Her own password (stored hashed; after she changes it, the one in `config.php` no longer works)
+
+Saved values live in `api/data/settings.json` (blocked from the web). Re-uploading the zip does not touch that file.
 
 ## What runs where
 - Pages: static HTML/JS (built from Next.js with `STATIC_EXPORT=1`)
 - `/api/contact`, `/api/subscribe`: PHP, emails Tamecka via the host's mail; every submission is also saved to `api/data/submissions.log` (blocked from the web) so nothing is lost
-- `/api/checkout`: PHP → Stripe Checkout (one-time + monthly gifts, shop cart with prices from `api/products.json`)
+- `/api/settings`, `/api/admin`: PHP, the `/admin` settings page (password login, session cookie, login rate limit)
+- Checkout: PayPal when a PayPal email is saved in `/admin`; otherwise `/api/checkout`: PHP → Stripe Checkout (one-time + monthly gifts, shop cart with prices from `api/products.json`)
 - Spam protection: per-visitor rate limit on all forms
 
 ## After changing prices or products

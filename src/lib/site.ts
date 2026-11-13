@@ -170,10 +170,20 @@ export type Product = {
   category: "Books" | "Apparel" | "Gifts";
   blurb: string;
   image?: string;
-  art?: "tee" | "tote" | "mug" | "candle";
+  art?: "tee" | "tote" | "mug" | "candle" | "journal";
   badge?: string;
   /** Not for sale yet: card shows "Coming soon", no price, cannot be added to the bag. */
   comingSoon?: boolean;
+};
+
+/**
+ * Payments. The PayPal email is normally saved from the /admin page; a value
+ * here is only the fallback if that can't be loaded. While a PayPal email is
+ * set, the shop bag and donations check out through that account (no API keys).
+ * With none, checkout uses /api/checkout (Stripe, preview mode until a key is added).
+ */
+export const payments = {
+  paypalEmail: "",
 };
 
 /** DRAFT shop catalogue. Prices + merch designs to be confirmed. */
@@ -197,20 +207,29 @@ export const products: Product[] = [
   },
   {
     id: "aspire-journal",
-    name: "Aspire to Inspire Journal",
+    name: "Aspire to Inspire Daily Affirmation Journal",
     price: 18,
     category: "Books",
     blurb: "30 daily affirmations with space to write your own life after.",
     image: "/images/ebook-aspire-to-inspire.webp",
-    badge: "New",
+    comingSoon: true,
+  },
+  {
+    id: "fs2s-journal",
+    name: "From Survivor to Soft Journal",
+    price: 18,
+    category: "Books",
+    blurb: "A guided journal for the journey from surviving to soft.",
+    image: "/images/shop-fs2s-journal.webp",
+    comingSoon: true,
   },
   {
     id: "soft-is-strength-tee",
-    name: "Soft Is Strength Tee",
+    name: "From Survivor to Soft Tee",
     price: 34,
     category: "Apparel",
-    blurb: "Heavyweight cotton in cream, butterfly on the back.",
-    art: "tee",
+    blurb: "Heavyweight cotton in cream or plum, FS2S butterfly on the back neck.",
+    image: "/images/shop-fs2s-tee.webp",
     comingSoon: true,
   },
   {
@@ -225,11 +244,11 @@ export const products: Product[] = [
   },
   {
     id: "aspire-mug",
-    name: "Aspire to Inspire Mug",
+    name: "From Survivor to Soft Mug",
     price: 18,
     category: "Gifts",
-    blurb: "Your morning affirmation, in plum and gold.",
-    art: "mug",
+    blurb: "Soft mornings. Strong woman. Cream ceramic with a plum handle.",
+    image: "/images/shop-fs2s-mug.webp",
     comingSoon: true,
   },
 ];
